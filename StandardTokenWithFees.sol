@@ -33,6 +33,7 @@ contract StandardTokenWithFees is StandardToken, Ownable {
     if (fee > 0) {
       super.transfer(owner, fee);
     }
+    return true;
   }
 
   function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
